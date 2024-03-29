@@ -1,13 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-import './components/AddUser'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddUser from './components/AddUser';
+import AllUsers from './components/AllUsers';
+import MERNAK from './components/MERNAK';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <AddUser/>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<MERNAK />} />
+        <Route path='/all' element={<AllUsers />} />
+        <Route path='add' element={<AddUser />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

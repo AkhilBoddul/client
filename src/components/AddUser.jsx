@@ -1,5 +1,5 @@
 const AddUser = () => {
-    return(
+    return (
         <p>Hello from AddUser</p>
     )
 }
